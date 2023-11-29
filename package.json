@@ -1,0 +1,19 @@
+{
+  "name": "drenvios",
+  "version": "1.0.0",
+  "description": "technical test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Geraldino96/drenvios.git"
+  },
+  "author": "enrique_geraldino <egeraldin96@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Geraldino96/drenvios/issues"
+  },
+  "homepage": "https://github.com/Geraldino96/drenvios#readme"
+}
