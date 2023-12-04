@@ -1,4 +1,4 @@
-const Products = require('../models/products.model')
+const Products = require('../models/products')
 
 const allProducts = async () => {
     return await Products.find()
@@ -6,28 +6,22 @@ const allProducts = async () => {
 
 const findStock = async () => {
   try {
+    console.log("Stock");
+
   const data = await allProducts();
   console.log(data)
   const stockfinal = [];
   data.forEach(e => {
-      if(e.enStock){
-      const foundStock = stockfinal.find(x => x.enStock === e.enStock);
+      if(e.existencia){
+      const foundStock = stockfinal.find(x => x.existencia === e.existencia);
       if (!foundStock) {
           stockfinal.push({
             nombre: e.nombre,
-            existencia: e.existencia,
-            stock: e.enStock
+            precio_base: e.precio_base,
+            existencia: e.existencia
           });
       }
-  } else if(e.existencia){
-    const foundStock = stockfinal.find(x => x.existencia === e.existencia);
-    if (!foundStock) {
-        stockfinal.push({
-          nombre: e.nombre,
-          existencia: e.existencia
-        });
-    }
-}
+  }
   });
   return stockfinal;
 } catch (error) {

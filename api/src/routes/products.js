@@ -6,7 +6,6 @@ const productsRoutes = Router();
 // Handle the /products endpoint
 productsRoutes.get("/", async (req, res) =>{
     try {
-        console.log("hola");
         return res.status(200).send(await findStock())
     } catch (error) {}
     // const {nombre}= req.query;

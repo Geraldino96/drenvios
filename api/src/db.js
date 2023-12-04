@@ -10,6 +10,5 @@ main().catch(err => console.log(err));
 
 async function main() {
   await mongoose.connect(`mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}`);
-  console.log("Connected!")
+  console.log("DB connected!")
 }
-
