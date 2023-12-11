@@ -4,7 +4,8 @@
   "description": "technical test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vercel-build": "echo hello"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,5 @@
     "mongo": "^0.1.0",
     "mongoose": "^8.0.2",
     "nodemon": "^3.0.1"
-  }
+    }
 }
