@@ -1,15 +1,14 @@
 const Products = require('../models/products')
 
+
 const allProducts = async () => {
-    return await Products.find()
+  const products = await Products.find()
+  return products
 }
 
 const findStock = async () => {
   try {
-    console.log("Stock");
-
   const data = await allProducts();
-  console.log(data)
   const stockfinal = [];
   data.forEach(e => {
       if(e.existencia){
@@ -28,16 +27,8 @@ const findStock = async () => {
       throw error
 }
 };
-
-// const findProducts = async (nombre) => {
-//   const regExpName = new RegExp(nombre, 'i');
-//   const productsByName = await Products.find({ nombre: regExpName });
-//   if (!productsByName.length) throw 'No se han encontrado productos con ese nombre';
-//   else return productsByName;
-// }
   
   module.exports = {
     allProducts,
-    findStock,
-    // findProducts,
+    findStock
   };
